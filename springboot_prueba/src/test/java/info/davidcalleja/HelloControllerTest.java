@@ -1,4 +1,4 @@
-package springboot_prueba;
+package info.davidcalleja;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
