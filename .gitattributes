@@ -1,0 +1,61 @@
+# More info: 
+# https://git-scm.com/book/uz/v2/Customizing-Git-Git-Attributes
+# https://help.github.com/articles/dealing-with-line-endings/
+# http://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/
+
+# Configure Git on OS X or Linux to properly handle line endings:
+# git config --global core.autocrlf input
+
+# Configure Git on Windows to properly handle line endings
+# git config --global core.autocrlf true
+
+# core.eol = native The default. When Git needs to change line endings to write a file in your 
+# working directory it will change them to whatever is the default line ending on your platform.
+# For Windows this will be CRLF, for Unix/Linux/OS X this will be LF.
+#
+# core.eol = crlf When Git needs to change line endings to write a file in your working directory 
+# it will always use CRLF to denote end of line.
+#
+# core.eol = lf When Git needs to change line endings to write a file in your working directory
+# it will always use LF to denote end of line.
+
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+* text eol=lf
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.java		text
+*.xml		text
+*.json		text
+*.txt		text
+*.yml		text
+*.properties	text
+*.sql		text
+*.csv		text
+*.css		text
+*.htm		text
+*.html		text
+*.js		text
+*.jsp		text
+*.md		text
+*.gradle	text
+*.bat		text eol=crlf
+
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
+*.war		binary
+*.jar		binary
+*.ear		binary
+*.class		binary
+*.dll		binary
+*.so		binary
+
+*.jpg		binary
+*.jpeg		binary
+*.png		binary
+*.gif		binary
+*.ico		binary
+*.bmp		binary
+
